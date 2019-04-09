@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,10 +23,18 @@
         padding: 7px;
       }
 
+      .container
+      {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       .topNav
       {
         float: right;
-        padding: 13px;
+        padding: 5px;
       }
 
       a.topNav:link
@@ -38,11 +47,38 @@
       {
         float: left;
         font-size: 48px;
+        margin-left: 200px;
       }
 
       img.backgroundImg
       {
-        margin-top: -40px;
+        width: 100%;
+        height: auto;
+        margin-top: -15px;
+      }
+
+      .relative
+      {
+        position: relative;
+      }
+
+      .name
+      {
+        font-family: 'open_sansbold';
+        font-size: 90px;
+        color: black;
+        position: absolute; /* Every absolute position should be contained by a relative position. */
+        top: 0; /* Every position is set to 0. */
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1; /* This will let your text be seen every time. */
+        margin: auto; /* Margin will do the trick to center the content. */
+        width: 100%; /* Width and Height is needed to let positions center the content. */
+        height: 30px;
+        text-align: center; /* Text align center because we used width: 100%; so we could writte any size text and it will be centered. */
+        line-height: 1em; /* This is not important. */
+        text-shadow: 3px 3px 3px #ffffff;
       }
 
       .bottomNav
@@ -52,11 +88,13 @@
         bottom: 0;
       }
 
-      .pageHead
+      .logo
       {
         float: left;
         padding-right: 120px;
         margin-top: -20px;
+        position: absolute;
+        z-index: 999;
       }
 
       button.topNav
@@ -87,17 +125,24 @@
         bottom: 12px;
       }
 
-      footer
+      @media screen and (max-width: 718px)
       {
-        position: relative;
-        left: 42em;
+        button.bottomNav
+        {
+          display:none;
+        }
+
+        .name
+        {
+          font-size: 32px;
+        }
       }
     </style>
   </head>
 
   <body>
     <header>
-      <img src="sbhLogo.png" height="200" alt="SeaBubbles Hawaii Logo" class="pageHead"/>
+      <img src="sbhLogo.png" height="200" alt="SeaBubbles Hawaii Logo" class="logo"/>
 
       <h1 class="pageName">
         HOME
@@ -137,55 +182,60 @@
         </ul>
       </nav>
     </header>
+    <div class="… relative">
+      <img src="turtle.jpg" width="100%" alt="Background image" class="backgroundImg">
 
-    <img src="turtle.jpg" width="100%" alt="Background image" class="backgroundImg">
+      <h4 class="name">Seabubbles Hawaii</h4>
+    </div>
 
     <footer>
-      <nav>
-        <ul>
-          <li>
-            <button <input type="button" onclick="location.href='index.html';" index.html" class="bottomNav">
-              Home
-            </button>
-          </li>
+      <div class="container">
+        <nav>
+          <ul>
+            <li>
+              <button <input type="button" onclick="location.href='index.html';" index.html" class="bottomNav">
+                Home
+              </button>
+            </li>
 
-          <li>
-            <button <input type="button" onclick="location.href='firsttime.html';" class="bottomNav">
-              First Time
-            </button>
-          </li>
+            <li>
+              <button <input type="button" onclick="location.href='firsttime.html';" class="bottomNav">
+                First Time
+              </button>
+            </li>
 
-          <li>
-            <button <input type="button" onclick="location.href='certified.html';" class="bottomNav">
-              Certified
-            </button>
-          </li>
+            <li>
+              <button <input type="button" onclick="location.href='certified.html';" class="bottomNav">
+                Certified
+              </button>
+            </li>
 
-          <li>
-            <button <input type="button" onclick="location.href='faq.html';" class="bottomNav">
-              FAQ
-            </button>
-          </li>
+            <li>
+              <button <input type="button" onclick="location.href='faq.html';" class="bottomNav">
+                FAQ
+              </button>
+            </li>
 
-          <li>
-            <button <input type="button" onclick="location.href='gallery.html';" class="bottomNav">
-              Gallery
-            </button>
-          </li>
+            <li>
+              <button <input type="button" onclick="location.href='gallery.html';" class="bottomNav">
+                Gallery
+              </button>
+            </li>
 
-          <li>
-            <a href="https://youtube.com" class="bottomNav" data-toggle="tooltip" data-placement="top" title="SeaBubbles Hawaii Facebook">
-              <i class="fa fa-facebook-square" style="font-size:48px;color:#3b5998"></i>
-            </a>
-          </li>
+            <li>
+              <a href="https://youtube.com" class="bottomNavSoc" data-toggle="tooltip" data-placement="top" title="SeaBubbles Hawaii Facebook">
+                <i class="fa fa-facebook-square" style="font-size:48px;color:#3b5998"></i>
+              </a>
+            </li>
 
-          <li>
-            <a href="https://youtube.com" class="bottomNav" data-toggle="tooltip" data-placement="top" title="SeaBubbles Hawaii Youtube">
-              <i class="fa fa-youtube" style="font-size:48px;color:red"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
+            <li>
+              <a href="https://youtube.com" class="bottomNavSoc" data-toggle="tooltip" data-placement="top" title="SeaBubbles Hawaii Youtube">
+                <i class="fa fa-youtube" style="font-size:48px;color:red"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </footer>
   </body>
 </html>
