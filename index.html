@@ -17,6 +17,19 @@
         background-color: #006994;
       }
 
+      ul.bottomNav
+      {
+        background: rgba(255, 255, 255, 0.3);
+        padding-left: 0px;
+      }
+
+      ul.topNav
+      {
+        position: absolute;
+        z-index: 2;
+        right: 0;
+      }
+
       li
       {
         display: inline-block;
@@ -46,15 +59,15 @@
       h1.pageName
       {
         float: left;
-        font-size: 48px;
-        margin-left: 200px;
+        font-size: 2.7vw;
+        margin-left: 11vw;
       }
 
       img.backgroundImg
       {
         width: 100%;
         height: auto;
-        margin-top: -15px;
+        margin-top: 10px;
       }
 
       .relative
@@ -65,7 +78,7 @@
       .name
       {
         font-family: 'open_sansbold';
-        font-size: 90px;
+        font-size: 8vw;
         color: black;
         position: absolute; /* Every absolute position should be contained by a relative position. */
         top: 0; /* Every position is set to 0. */
@@ -88,13 +101,19 @@
         bottom: 0;
       }
 
+      .w3-button
+      {
+        display: none;
+      }
+
       .logo
       {
         float: left;
         padding-right: 120px;
         margin-top: -20px;
         position: absolute;
-        z-index: 999;
+        z-index: 2;
+        width: 17%;
       }
 
       button.topNav
@@ -107,7 +126,8 @@
         display: inline-block;
         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
         text-align: center;
-        font-size: 32px;
+        font-size: 1.3vw;
+        z-index: 3;
       }
 
       button.bottomNav
@@ -120,21 +140,44 @@
         display: inline-block;
         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
         text-align: center;
-        font-size: 14px;
+        font-size: .7vw;
         position: relative;
         bottom: 12px;
       }
 
-      @media screen and (max-width: 718px)
+      @media screen and (max-width: 1547px)
+      {
+        .logo
+        {
+          width: 263px;
+        }
+      }
+
+      @media screen and (max-width: 1105px)
+      {
+        h1.pageName
+        {
+          font-size: 30px;
+          margin-top: 20px;
+          margin-left: 120px;
+        }
+      }
+
+      @media screen and (max-width: 702px)
       {
         button.bottomNav
         {
           display:none;
         }
 
-        .name
+        button.topNav
         {
-          font-size: 32px;
+          display:none;
+        }
+
+        .w3-button
+        {
+          display: block;
         }
       }
     </style>
@@ -142,90 +185,105 @@
 
   <body>
     <header>
-      <img src="sbhLogo.png" height="200" alt="SeaBubbles Hawaii Logo" class="logo"/>
+      <a href="index.html">
+        <img src="sbhLogo.png" alt="SeaBubbles Hawaii Logo" class="logo"/>
+      </a>
 
       <h1 class="pageName">
         HOME
       </h1>
 
-      <nav class="topNav">
-        <ul>
+      <nav>
+        <ul class="topNav">
           <li>
-            <button <input type="button" onclick="location.href='index.html';" index.html" class="topNav">
+            <button type="button" onclick="location.href='index.html';" class="topNav">
               Home
             </button>
           </li>
 
           <li>
-            <button <input type="button" onclick="location.href='firsttime.html';" class="topNav">
+            <button type="button" onclick="location.href='firsttime.html';" class="topNav">
               First Time
             </button>
           </li>
 
           <li>
-            <button <input type="button" onclick="location.href='certified.html';" class="topNav">
+            <button type="button" onclick="location.href='certified.html';" class="topNav">
               Certified
             </button>
           </li>
 
           <li>
-            <button <input type="button" onclick="location.href='faq.html';" class="topNav">
+            <button type="button" onclick="location.href='faq.html';" class="topNav">
               FAQ
             </button>
           </li>
 
           <li>
-            <button <input type="button" onclick="location.href='gallery.html';" class="topNav">
+            <button type="button" onclick="location.href='gallery.html';" class="topNav">
               Gallery
             </button>
+          </li>
+
+          <li>
+            <button class="w3-button w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+            <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+              <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+              <a href="index.html" class="w3-bar-item w3-button">Home</a>
+              <a href="firsttime.html" class="w3-bar-item w3-button">First Time</a>
+              <a href="certified.html" class="w3-bar-item w3-button">Certified</a>
+              <a href="faq.html" class="w3-bar-item w3-button">FAQ</a>
+              <a href="gallery.html" class="w3-bar-item w3-button">Gallery</a>
+            </div>
           </li>
         </ul>
       </nav>
     </header>
-    <div class="… relative">
-      <img src="turtle.jpg" width="100%" alt="Background image" class="backgroundImg">
 
-      <h4 class="name">Seabubbles Hawaii</h4>
+    <div class="… relative">
+      <img src="turtle.jpg" alt="Background image" class="backgroundImg">
+
+      <h4 class="name">SeaBubbles Hawaii</h4>
     </div>
 
     <footer>
       <div class="container">
         <nav>
-          <ul>
+          <ul class="bottomNav">
             <li>
-              <button <input type="button" onclick="location.href='index.html';" index.html" class="bottomNav">
+              <a href="https://facebook.com" class="bottomNavSoc" data-toggle="tooltip" data-placement="top" title="SeaBubbles Hawaii Facebook">
+                <i class="fa fa-facebook-square" style="font-size:48px;color:#3b5998"></i>
+              </a>
+            </li>
+
+            <li>
+              <button type="button" onclick="location.href='index.html';" class="bottomNav">
                 Home
               </button>
             </li>
 
             <li>
-              <button <input type="button" onclick="location.href='firsttime.html';" class="bottomNav">
+              <button type="button" onclick="location.href='firsttime.html';" class="bottomNav">
                 First Time
               </button>
             </li>
 
             <li>
-              <button <input type="button" onclick="location.href='certified.html';" class="bottomNav">
+              <button type="button" onclick="location.href='certified.html';" class="bottomNav">
                 Certified
               </button>
             </li>
 
             <li>
-              <button <input type="button" onclick="location.href='faq.html';" class="bottomNav">
+              <button type="button" onclick="location.href='faq.html';" class="bottomNav">
                 FAQ
               </button>
             </li>
 
             <li>
-              <button <input type="button" onclick="location.href='gallery.html';" class="bottomNav">
+              <button type="button" onclick="location.href='gallery.html';" class="bottomNav">
                 Gallery
               </button>
-            </li>
-
-            <li>
-              <a href="https://youtube.com" class="bottomNavSoc" data-toggle="tooltip" data-placement="top" title="SeaBubbles Hawaii Facebook">
-                <i class="fa fa-facebook-square" style="font-size:48px;color:#3b5998"></i>
-              </a>
             </li>
 
             <li>
@@ -237,5 +295,15 @@
         </nav>
       </div>
     </footer>
+
+    <script>
+    function openRightMenu() {
+      document.getElementById("rightMenu").style.display = "block";
+    }
+
+    function closeRightMenu() {
+      document.getElementById("rightMenu").style.display = "none";
+    }
+    </script>
   </body>
 </html>
