@@ -1,0 +1,173 @@
+body
+{
+  background-color: #006994;
+}
+ul.bottomNav
+{
+  background: rgba(255, 255, 255, 0.3);
+  padding-left: 0px;
+}
+ul.topNav
+{
+  position: absolute;
+  z-index: 2;
+  right: 0;
+}
+li
+{
+  display: inline-block;
+  padding: 7px;
+}
+.container
+{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topNav
+{
+  float: right;
+  padding: 5px;
+}
+a.topNav:link
+{
+  text-decoration: none;
+  font-size: 32px;
+}
+h1.pageName
+{
+  float: left;
+  font-size: 2.7vw;
+  margin-left: 11vw;
+}
+img.backgroundImg
+{
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+.relative
+{
+  position: relative;
+}
+.name
+{
+  font-family: 'open_sansbold';
+  font-size: 8vw;
+  color: black;
+  position: absolute; /* Every absolute position should be contained by a relative position. */
+  top: 0; /* Every position is set to 0. */
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1; /* This will let your text be seen every time. */
+  margin: auto; /* Margin will do the trick to center the content. */
+  width: 100%; /* Width and Height is needed to let positions center the content. */
+  height: 30px;
+  text-align: center; /* Text align center because we used width: 100%; so we could writte any size text and it will be centered. */
+  line-height: 1em; /* This is not important. */
+  text-shadow: 3px 3px 3px #ffffff;
+}
+
+.bottomNav
+{
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+.w3-button
+{
+  display: none;
+}
+
+.logo
+{
+  float: left;
+  padding-right: 120px;
+  margin-top: -20px;
+  position: absolute;
+  z-index: 2;
+  width: 17%;
+}
+button.topNav
+{
+  background: #cccccc;
+  border: 3px solid #000000;
+  border-radius: 1000px;
+  padding: 8px 18px;
+  color: #000000;
+  display: inline-block;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align: center;
+  font-size: 1.3vw;
+  z-index: 3;
+}
+
+button.topNav:hover {
+  background-color: #4db8ff;
+  color: white;
+}
+
+button.bottomNav:hover {
+  background-color: #4db8ff;
+  color: white;
+}
+
+button.bottomNav
+{
+  background: #cccccc;
+  border: 3px solid #000000;
+  border-radius: 1000px;
+  padding: 8px 18px;
+  color: #000000;
+  display: inline-block;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align: center;
+  font-size: .7vw;
+  position: relative;
+  bottom: 12px;
+}
+.carousel-inner, .item, img {
+  width: 80%;
+  margin: auto;
+}
+
+.carl
+{
+  padding-top: 120px;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 1547px)
+{
+  .logo
+  {
+    width: 263px;
+  }
+}
+@media screen and (max-width: 1105px)
+{
+  h1.pageName
+  {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 120px;
+  }
+}
+@media screen and (max-width: 702px)
+{
+  button.bottomNav
+  {
+    display:none;
+  }
+  button.topNav
+  {
+    display:none;
+  }
+  .w3-button
+  {
+    display: block;
+  }
+}
