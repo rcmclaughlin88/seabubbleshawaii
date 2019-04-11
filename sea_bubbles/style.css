@@ -1,0 +1,140 @@
+body {
+  background-color: #006994;
+}
+
+li {
+  display: inline-block;
+  padding: 7px;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topNav {
+  float: right;
+  padding: 5px;
+}
+
+a.topNav:link {
+  text-decoration: none;
+  font-size: 32px;
+}
+
+h1.pageName {
+  float: left;
+  font-size: 48px;
+  margin-left: 200px;
+}
+
+img.backgroundImg {
+  width: 100%;
+  height: auto;
+  margin-top: -15px;
+}
+
+.relative {
+  position: relative;
+}
+
+.name {
+  font-family: 'open_sansbold';
+  font-size: 90px;
+  color: black;
+  position: absolute;
+  /* Every absolute position should be contained by a relative position. */
+  top: 0;
+  /* Every position is set to 0. */
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  /* This will let your text be seen every time. */
+  margin: auto;
+  /* Margin will do the trick to center the content. */
+  width: 100%;
+  /* Width and Height is needed to let positions center the content. */
+  height: 30px;
+  text-align: center;
+  /* Text align center because we used width: 100%; so we could writte any size text and it will be centered. */
+  line-height: 1em;
+  /* This is not important. */
+  text-shadow: 3px 3px 3px #ffffff;
+}
+
+.bottomNav {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+.logo {
+  float: left;
+  padding-right: 120px;
+  margin-top: -20px;
+  position: absolute;
+  z-index: 999;
+}
+
+button.topNav {
+  background: #cccccc;
+  border: 3px solid #000000;
+  border-radius: 1000px;
+  padding: 8px 18px;
+  color: #000000;
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 32px;
+}
+
+button.bottomNav {
+  background: #cccccc;
+  border: 3px solid #000000;
+  border-radius: 1000px;
+  padding: 8px 18px;
+  color: #000000;
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  bottom: 12px;
+}
+
+@media screen and (max-width: 718px) {
+  button.bottomNav {
+    display: none;
+  }
+
+  .name {
+    font-size: 32px;
+  }
+
+  div.gallery {
+    margin: 5px;
+    float: left;
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+
+  div.gallery img {
+    width: 50%;
+    height: auto;
+  }
+
+.pictures {
+  display: flex;
+  align-items: center;
+}
+
+
+}
