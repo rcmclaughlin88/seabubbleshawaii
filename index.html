@@ -16,26 +16,22 @@
       {
         background-color: #006994;
       }
-
       ul.bottomNav
       {
         background: rgba(255, 255, 255, 0.3);
         padding-left: 0px;
       }
-
       ul.topNav
       {
         position: absolute;
         z-index: 2;
         right: 0;
       }
-
       li
       {
         display: inline-block;
         padding: 7px;
       }
-
       .container
       {
         height: 100%;
@@ -43,38 +39,32 @@
         justify-content: center;
         align-items: center;
       }
-
       .topNav
       {
         float: right;
         padding: 5px;
       }
-
       a.topNav:link
       {
         text-decoration: none;
         font-size: 32px;
       }
-
       h1.pageName
       {
         float: left;
         font-size: 2.7vw;
         margin-left: 11vw;
       }
-
       img.backgroundImg
       {
         width: 100%;
         height: auto;
         margin-top: 10px;
       }
-
       .relative
       {
         position: relative;
       }
-
       .name
       {
         font-family: 'open_sansbold';
@@ -106,6 +96,17 @@
         display: none;
       }
 
+      .w3-bar-item: hover
+      {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+
+      button: hover
+      {
+
+      	background:#000000;
+      }
+
       .logo
       {
         float: left;
@@ -115,7 +116,6 @@
         z-index: 2;
         width: 17%;
       }
-
       button.topNav
       {
         background: #cccccc;
@@ -129,7 +129,6 @@
         font-size: 1.3vw;
         z-index: 3;
       }
-
       button.bottomNav
       {
         background: #cccccc;
@@ -145,6 +144,10 @@
         bottom: 12px;
       }
 
+      .w3-bar-item
+      {
+      }
+
       @media screen and (max-width: 1547px)
       {
         .logo
@@ -152,7 +155,6 @@
           width: 263px;
         }
       }
-
       @media screen and (max-width: 1105px)
       {
         h1.pageName
@@ -162,19 +164,16 @@
           margin-left: 120px;
         }
       }
-
       @media screen and (max-width: 702px)
       {
         button.bottomNav
         {
           display:none;
         }
-
         button.topNav
         {
           display:none;
         }
-
         .w3-button
         {
           display: block;
@@ -226,14 +225,14 @@
           </li>
 
           <li>
-            <button class="w3-button w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
-            <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
-              <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
-              <a href="index.html" class="w3-bar-item w3-button">Home</a>
-              <a href="firsttime.html" class="w3-bar-item w3-button">First Time</a>
-              <a href="certified.html" class="w3-bar-item w3-button">Certified</a>
-              <a href="faq.html" class="w3-bar-item w3-button">FAQ</a>
-              <a href="gallery.html" class="w3-bar-item w3-button">Gallery</a>
+            <button class="w3-button w3-xlarge w3-right w3-hover-blue" onclick="openRightMenu()">&#9776;</button>
+            <div class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-blue" style="display:none;right:0;" id="rightMenu">
+              <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large w3-hover-cyan">Close &times;</button>
+              <a href="index.html" class="w3-bar-item w3-button w3-hover-cyan">Home</a>
+              <a href="firsttime.html" class="w3-bar-item w3-button w3-hover-cyan">First Time</a>
+              <a href="certified.html" class="w3-bar-item w3-button w3-hover-cyan">Certified</a>
+              <a href="faq.html" class="w3-bar-item w3-button w3-hover-cyan">FAQ</a>
+              <a href="gallery.html" class="w3-bar-item w3-button w3-hover-cyan">Gallery</a>
             </div>
           </li>
         </ul>
@@ -300,7 +299,6 @@
     function openRightMenu() {
       document.getElementById("rightMenu").style.display = "block";
     }
-
     function closeRightMenu() {
       document.getElementById("rightMenu").style.display = "none";
     }
